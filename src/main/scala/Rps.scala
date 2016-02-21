@@ -36,11 +36,7 @@ object Rps {
       .onComplete(_ ⇒ system.terminate()) // and shutdown when done
   }
 
-  val beatenBy = Map(
-    "rock" -> "scissors",
-    "paper" -> "rock",
-    "scissors" -> "paper"
-  )
+  import Rules._
 
   val options = beatenBy.keys
 
@@ -53,6 +49,14 @@ object Rps {
   }
 
   val AChoice = PathMatcher.valueMap2PathMatcher(options.map(a => a -> a).toMap)
+}
+
+object Rules {
+  val beatenBy = Map(
+    "rock" -> "scissors",
+    "paper" -> "rock",
+    "scissors" -> "paper"
+  )
 }
 
 

@@ -22,3 +22,7 @@ build:
         name: compile
         code: |
           sbt compile
+    - script:
+        name: test
+        code: |
+          sbt test
