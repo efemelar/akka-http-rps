@@ -6,7 +6,7 @@ class RulesSpec extends org.specs2.mutable.Specification {
 
   "Rock" >> {
     "beats scissors" >> {
-      ("scissors" == beatenBy("rock")) === false
+      ("scissors" == beatenBy("rock")) === true
     }
   }
 }
